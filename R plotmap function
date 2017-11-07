@@ -1,0 +1,5 @@
+plotmap = function(x, cntry = "country") {
+  m <- as.data.frame(getData("ISO3"))  
+  adm <- raster::getData("GADM", country = (m$ISO3[m$NAME == cntry]), level = x)
+  plot(adm)
+  }
