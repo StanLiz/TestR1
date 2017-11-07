@@ -1,0 +1,6 @@
+m <- as.data.frame(getData("ISO3"))
+head(m)
+m$ISO3
+cntry <- "Belgium"
+country = (m$ISO3[m$NAME == cntry])
+country
